@@ -7,7 +7,7 @@ read APP_NAME
 
 #install os dependencies
 sudo apt update
-sudo apt install -y python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools python3-venv nginx
+sudo apt install -y python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools python3-venv nginx sqlite3 sqlitebrowser
 
 #make and enter flask dir
 mkdir ~/$APP_NAME
@@ -36,7 +36,15 @@ deactivate
 #create sock file
 touch $APP_NAME.sock
 
+#make needed folders
+mkdir log
+mkdir templates
+mkdir static
+
 #move over needed files
+cp ~/flask_base/errorLog.log log/errorLog.log
+cp ~/flask_base/logError.py logError.py
+cp ~/flask_base/index.html templates/index.html
 cp ~/flask_base/index.py index.py
 cp ~/flask_base/wsgi.py wsgi.py
 cp ~/flask_base/app.ini app.ini
@@ -46,7 +54,7 @@ cp ~/flask_base/app.conf $APP_NAME.conf
 #EDIT FILES...
 
 #edit ini file
-sed -i "/socket = /c\socket = $APP_NAME.sock" app.ini
+sed -i "/socket = flask_base.sock/c\socket = $APP_NAME.sock" app.ini
 
 #edit serivce file
 sed -i "/User=/c\User=$USER" $APP_NAME.service
@@ -79,3 +87,8 @@ sudo systemctl enable nginx
 
 
 # sudo rm -Rf /etc/systemd/system/test* && sudo rm -Rf /etc/nginx/conf.d/test* && sudo rm -Rf test*
+
+
+
+
+
