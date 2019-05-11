@@ -1,4 +1,6 @@
-# Deploy a base Python3 FLask App on Ubuntu 18.04
+# Deploy a Base Python3 Flask App on Ubuntu 18.04
+
+configured to use SQLite3 Database
 
 Guide:
 https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uswgi-and-nginx-on-ubuntu-18-04
