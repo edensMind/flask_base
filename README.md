@@ -1,6 +1,8 @@
 # Deploy a Base Python3 Flask App on Ubuntu 18.04
 
-configured to use SQLite3 Database
+__NOTES:__
+* Assumes `python3` and `git` is installed before deployment 
+* configured to use SQLite3 Database
 
 Guide:
 https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uswgi-and-nginx-on-ubuntu-18-04
