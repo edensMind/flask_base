@@ -4,7 +4,8 @@ __NOTES:__
 * Assumes `python3` and `git` is installed before deployment 
 * configured to use SQLite3 Database
 
-Guide:
+__Guide Source:__
+
 https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uswgi-and-nginx-on-ubuntu-18-04
 
 __Deploy With:__
