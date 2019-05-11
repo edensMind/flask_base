@@ -1,4 +1,4 @@
-# flask_base
+# Deploy a base Python3 FLask App on Ubuntu 18.04
 
 Guide:
 https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uswgi-and-nginx-on-ubuntu-18-04
