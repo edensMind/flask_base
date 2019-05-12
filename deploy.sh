@@ -44,7 +44,10 @@ mkdir static
 #move over needed files
 cp ~/flask_base/errorLog.log log/errorLog.log
 cp ~/flask_base/logError.py logError.py
-cp ~/flask_base/index.html templates/index.html
+
+cp -R ~/flask_base/static/* static/
+cp -R ~/flask_base/templates/* templates/
+
 cp ~/flask_base/index.py index.py
 cp ~/flask_base/wsgi.py wsgi.py
 cp ~/flask_base/app.ini app.ini
